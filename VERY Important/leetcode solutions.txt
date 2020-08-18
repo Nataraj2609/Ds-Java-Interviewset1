@@ -1,0 +1,120 @@
+
+
+https://leetcode.com/problems/two-sum/submissions/
+
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+      Map<Integer,Integer> diffMap = new HashMap();
+      for(int i=0;i<nums.length;i++){
+          int diff = target - nums[i];
+          if(diffMap.get(diff) != null){
+              return new int[]{diffMap.get(diff),i};
+          }
+          diffMap.put(nums[i],i);
+      }
+       throw new IllegalArgumentException(); 
+    }
+}
+
+121. Best Time to Buy and Sell Stock
+
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        if(prices.length < 2)
+            return 0;
+        int minPrice = prices[0];
+        int maxProfit = 0;
+        for(int i = 0; i< prices.length;i++){
+            minPrice = Math.min(prices[i],minPrice);
+            maxProfit = Math.max(prices[i]-minPrice,maxProfit);
+        }
+        return maxProfit;
+}
+}
+
+https://leetcode.com/problems/contains-duplicate/submissions/
+
+Given an array of integers, find if the array contains any duplicates.
+
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        boolean flag = false;
+   
+        Arrays.sort(nums);
+        for(int i=0; i< nums.length-1;i++){
+            if( nums.length!=0 && nums[i]==nums[i+1] ){
+                flag = true;
+                break;
+            }
+                
+        }
+        
+        return flag;
+    }
+}
+
+
+
+// Java program for Left Rotation and Right 
+// Rotation of a String 
+import java.util.*; 
+import java.io.*; 
+
+class GFG 
+{ 
+    
+  // function that rotates s towards left by d 
+  static String leftrotate(String str, int d) 
+  { 
+      String ans = str.substring(d) + str.substring(0, d); 
+      return ans; 
+  } 
+
+  // function that rotates s towards right by d 
+  static String rightrotate(String str, int d) 
+  { 
+      return leftrotate(str, str.length() - d); 
+  } 
+
+  // Driver code 
+  public static void main(String args[]) 
+  { 
+      String str1 = "GeeksforGeeks"; 
+      System.out.println(leftrotate(str1, 2)); 
+
+      String str2 = "GeeksforGeeks"; 
+      System.out.println(rightrotate(str2, 2)); 
+  } 
+} 
+
+// Output :
+Left rotation:  eksforGeeksGe
+Right rotation:  ksGeeksforGee  
+
+
+Word Count in a sentence
+
+public Map<String, Integer> wordCount(String[] strings) {
+  Map<String, Integer> map = new HashMap<String, Integer> ();
+  for (String s:strings) {
+    
+    if (!map.containsKey(s)) {  // first time we've seen this string
+      map.put(s, 1);
+    }
+    else {
+      int count = map.get(s);
+      map.put(s, count + 1);
+    }
+  }
+  return map;
+}
+

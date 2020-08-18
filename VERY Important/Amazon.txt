@@ -1,0 +1,36 @@
+
+
+Amazon
+
+An SDE I is essentially a new and inexperienced (at the level of Amazon's engineers) junior engineer, usually a college hire.
+
+SDE IIs have a few years of experience, including experience with large codebases and some architectural experience.
+
+SDE IIIs have many years of experience, and have led or spearheaded at least one nontrivial or important project.
+
+				SDE-1 are expected to solve any problems related to “Coding, Data structures, Algorithms, Problem Solving”
+
+				SDE-2 are expected to solve what SDE-1 can solve + “Object Oriented Design, System design and architecture” + some leadership skills
+
+
+		An experienced candidate should know his/her capability and skills and if they doubt themselves, it’s definitely not easy for an interviewer to trust their skills.
+
+
+Must : https://medium.com/@rachit138/how-i-cleared-the-amazon-sde-2-interview-f82a33706ff4
+
+At first level you might be using someone else code and just doing modification.
+At second level you might be reviewing other code.
+Then next level you might be asked to write code from scratch level or act as lead and think from overall project perspective.
+
+
+
+Microsoft
+
+Level = Title = Expected job performance
+59-60 = SDE = Creates complex solutions to simple problems.
+61-62 = SDE II = Creates simple solutions to simple problems.
+63-64 = Senior SDE = Creates simple solutions to complex problems.
+65+ = Principal SDE = Makes complex problems disappear.
+
+
+

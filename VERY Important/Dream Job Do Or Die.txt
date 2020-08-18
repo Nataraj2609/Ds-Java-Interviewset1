@@ -1,0 +1,153 @@
+Acing Tech Interviews And Getting A Job You Love
+
+		javascript.info
+
+		stackoverflow jobs
+
+		3 months for training
+
+Hackerrank Leetcode - easy, medium
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+
+		Js Fundamentals
+
+		Algorithms CSS - layout position
+
+		More than 10 interviews
+
+		scope, closure, 
+
+		Graphs
+
+		Api call Response and make a tree
+
+Back End - 	system design 
+
+https://www.kalzumeus.com/2012/01/23/salary-negotiation/		
+
+https://twitter.com/TheLearningDev/status/1278345258544230400			
+
+________________________________________________________________________________
+@WellPaidGeek
+Jun 19
+
+Become a pro dev:
+
+1. Pick a language
+2. Watch tutorials and follow along
+3. Complete coding challenges
+4. Build some small apps
+5. Learn related technologies
+6. Build portfolio
+7. Apply for jobs
+
+
+JavaScript Teacher
+@javascriptual
+May 10
+Stage 1 – HTML (DOM.)
+Stage 2 – CSS (CSSOM, flex, grid.)
+Stage 3 – JavaScript / front-end.
+Stage 4 – git / linux cli
+Stage 5 – React.
+Stage 6 – Node.
+Stage 7 – Express.
+Stage 8 – Mongo (or MySQL.)
+Stage 9 –  back-end xp @ your 1st job.
+
+If you've never spoken JavaScript, here's a good start:
+1. class / import / new
+2. () => {} arrow functions
+3. understanding === operator
+4. Learn Array.* higher-order functions (.filter, .map & .reduce)
+5. async / await
+6. import / export
+7. [] is iterable
+8. {} is enumerable
+
+
+JavaScript Teacher
+@javascriptual
+May 26, 2019
+Coding is all about:
+1. Looping
+2. Defining
+3. Calling
+4. Listing
+5. Merging
+6. Deleting
+7. Removing
+8. Erasing
+9. Updating
+10. Calculating
+11. Rendering
+12. Requesting
+13. Returning
+14. Invoking
+15. Submitting
+16. Accepting
+17. Rejecting
+18. Applying
+19. Filtering
+20. Mapping	
+
+
+You have deep knowledge of API design principles and best-practices, caching, resiliency, RPC, REST, and HTTP
+
+
+Basic qualifications:
+
+- 3-6 years of prior experience
+
+- Advanced understanding of OOPS
+
+- Knowledge of SDLC (Software Development Lifecycle)
+
+- Experience of working in an Agile environment
+
+- Ability to design for scale and performance
+
+- Ability to do peer code reviews
+
+- Solid problem-solving skills
+
+- Experience with hands-on programming
+
+- Expertise in data structures and algorithms
+
+pragmatic programmers
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+
+MVC Pattern
+app.py — the entry & exit point to our application
+service.py — converts the request into a response.
+models.py — handles everything that involves a Database.
+
+
+
+#Paytm is looking for Backend Developers(Java) for Noida Location.
+Strong software design/development experience in building massively large scale distributed internet systems and products.
+Hands-on experience in Advance Java and frameworks, Multithreading, collections and MySQL/NoSQL, etc.
+Excellent data structure & algorithm and problem solving skills.
+Please share your profile on monika1.jain@paytm.com
+
+
+Package management
+unit/functional testing
+Restful Api
+security best practices
+Authentication / Authorization : OAuth2 / jwt
+deploying your app(in docker)
+web sockets
+orm / data management
+
+https://www.edureka.co/blog/java-frameworks/
+https://www.edureka.co/blog/advanced-java-tutorial
+
+https://www.javacodegeeks.com/2015/06/java-programming-tips-best-practices-beginners.html
+
+https://howtodoinjava.com/ibatis-2/
+https://howtodoinjava.com/hibernate-tutorials/
+https://howtodoinjava.com/java/jdbc/jdbc-mysql-database-connection-example/
