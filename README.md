@@ -1,3 +1,19 @@
+
+### Welcome to DSA Nataraj
+
+1. [Arrays](https://nataraj2609.github.io/Ds-Java-Interviewset1/Arrays)
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Nataraj2609/Ds-Java-Interviewset1/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
