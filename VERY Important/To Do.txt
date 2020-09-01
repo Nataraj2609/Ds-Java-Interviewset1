@@ -17,6 +17,7 @@ MySql
 https://www.tutorialspoint.com/dbms/dbms_data_independence.htm
 https://beginnersbook.com/2018/11/introduction-to-sql/
 
+
 Design pattern Ecom Architecture
 https://github.com/MoonSulong/Ecommerce#4-database-implementation
 https://creately.com/diagram/example/iosv0d302/E-commerce%20database%20schema
