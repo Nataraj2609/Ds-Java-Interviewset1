@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leetcode Direcct Links</title>
+	<title>Sql</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<!-- JS, Popper.js, and jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
 <div class="container">
 <div class="card border-dark mb-3">
   <div class="card-body text-dark">
-    <h5 class="card-title">Title - LeetCode Direct Links</h5>
+    <h5 class="card-title">Title - Sql</h5>
     <p class="card-text">
 
 <ul>
@@ -44,6 +44,32 @@
 			# https://dev.mysql.com/doc/refman/8.0/en/caching-sha2-pluggable-authentication.html
 			#
 			ALTER USER 'hbstudent'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hbstudent';
+			</pre>
+			</li>
+
+
+
+			<li>
+				<h3>Create DB and Table</h3>
+			<pre>
+				CREATE DATABASE  IF NOT EXISTS `hb_student_tracker`;
+				USE `hb_student_tracker`;
+
+				--
+				-- Table structure for table `student`
+				--
+
+				DROP TABLE IF EXISTS `student`;
+
+				CREATE TABLE `student` (
+				  `id` int(11) NOT NULL AUTO_INCREMENT,
+				  `first_name` varchar(45) DEFAULT NULL,
+				  `last_name` varchar(45) DEFAULT NULL,
+				  `email` varchar(45) DEFAULT NULL,
+				  PRIMARY KEY (`id`)
+				) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
 			</pre>
 			</li>
 
