@@ -1,0 +1,152 @@
+Java
+Oops - Object,Class,Inheritance, Polymorphism, abstraction, Encapsulation
+Inheritance - types and explanation of types
+mainly Multiple inheritance 
+composition Vs Inheritance
+Polymorphism - Method Overloading,Method Overriding,Method Hiding
+Abstraction - Abstarct class Vs Interface
+--------------------------------------------
+Static :
+Static method, static block ,static variable,static class
+----------
+final :
+final,finally, finalize()
+immutable class in java
+----------
+Interface :
+Marker Interface , Functional interface & how to create custom functional interface
+-----------
+Diamond operator ,
+Vararg ,
+Wrapper class and auto boxing ,
+String literal ,String Pool,
+Constant Pool Vs non Constant Pool,
+String Vs String Buffer,String intern, break,continue,
+== Vs equal(),
+Generics,
+this(),super()
+Atomic Operation ,Atomic Integer
+Constructor Chaining,Recursive function
+Shallow Copy Vs Deep Copy,
+Singleton Class in java,
+transient Keyword in java
+----------
+Inner class : 
+Inner class , Method local inner class,Anonymous inner class,static inner class
+---------
+Memory Management :
+Heap Memory , Stack Memory
+Garbage collection
+system.gc ()
+How to manage outofmemory error
+stackoverflow Vs OutOfMemory
+----------
+Exception Handling :
+Exception Hierarchy 
+Checked Exception
+Unchecked Exception
+Error
+try,catch,finally, throw,throws
+Custom Exception
+-----------
+Spring Boot :
+DI ,Constructor Based DI ,Setter Based DI
+@Controller Vs @RESTController
+Profiles in Spring Boot
+MVC flow ,Spring Vs Spring Boot
+Spring Boot Starter,Actuator and endpoints
+@Autowired Vs @Qualifier
+Lombok @Data like
+Annotation and custom annotation
+Interceptor, scheduling
+------------
+Beans :
+life cycle of Bean
+Scope of Bean
+Bean factory
+------------
+Collection & Map :
+list & linked list and types
+Arraylist Vs linked list
+Arraylist internal working
+HashMap & Hash Set internal implementation
+HashMap Vs Concurrent HashMap
+fail-fast Vs fail-safe
+using Map coding experience
+-------------
+Java 8 features :
+Lambda Expression ,functional interface,stream API ,New Date time API
+Terminal operation Vs intermediate operation
+stream type and explanation
+why we go for new Date time API
+String Join(),
+Aggregate Operations in stream,predicate
+---------------
+REST API :
+GET(),POST(),DELETE(),OPTION()
+PUT Vs PATCH
+REST FLOW Design
+Spring Boot state or stateless
+How to manage Passwords in REST
+--------------
+Hibernate :
+ORM,Hibernate Architecture, Hibernate state
+Fetch Type(Lazy&Eager)
+Cascade Property
+@generateValue Types
+Entity Relationship (@one-to-may like)
+diff b/w get(),load()
+caching Mechanism
+1st Level cache ,2nd level cache
+session,session factory,
+criteria Query,Transaction
+Open session(),get session ()
+@Query
+SQL Vs HQL
+-------------------
+Threading :
+thread Vs Process
+what r all the ways to create threads
+Executor service class
+Thread pool
+synchronization vs locking
+thread life cycle and state
+create thread using java 8 features
+Volatile keyword in java
+--------------
+Microservices :
+Advantage and Disadvantage of microservices
+Service Discovery
+API Gateway - filter()
+Zuul proxy
+load balancing
+ribbon load balancing
+hystrix circuit breaker pattern
+----------------
+Design pattern and Disadvantage
+
+
+
+
+function doFollow(){
+let arr = []
+arr = document.getElementsByClassName("sqdOP  L3NKy   y3zKF     ")
+
+for(let i=0;i<arr.length;i++){
+console.log(arr[i].click());
+console.log("Followed Account ",i+1);
+setTimeout(doFollow(),3000);
+}
+}
+
+
+// repeat with the interval of 5 seconds
+let timerId = setInterval(() => doFollow(), 5000);
+
+
+timerId
+
+// after 5 seconds stop
+setTimeout(() => { clearInterval(timerId); alert('stoped Boss'); }, 2000);
+
+

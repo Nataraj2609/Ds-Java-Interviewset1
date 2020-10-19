@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title - Finding Second Max in an array</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/monokai-sublime.min.css" integrity="sha512-8irWeigPA1Pm20tgaynUtqbAQ/zvOizMj7Olu0sF9kQTGabFfvlAHUqhslzHwr7OZO6Z0IN6VoXAALzipXIwgA==" crossorigin="anonymous" />
+			<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css">
+			body{
+				padding: 20px;
+			}
+		</style>
+</head>
+<body>
+<div class="container">
+<div class="card border-dark mb-3">
+  <div class="card-body text-dark">
+    <h5 class="card-title">Title - Merge Sort - Baeldung</h5>
+    <p class="card-text">
+<pre><code class="java">
+
+
+
+// JAVA Code for Find Second largest element in an array 
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void mergeSort(int arr[], int n){
+		if(n<2)
+		  return;
+		int m = n/2;
+		int[] l = new int[m];
+		int[] r = new int[n-m];
+		
+		for(int i=0; i< m; i++){
+			l[i] = arr[i];
+		}
+			for(int j=m; j< n; j++){
+			r[j-m] = arr[j];
+		}
+		
+		mergeSort(l,m);
+		mergeSort(r,n-m);
+
+		merge(arr,l,r,m,n-m);
+		
+	}
+	
+	public static void merge(int[] a, int[] l, int[] r, int left, int right){
+		int i=0,j=0,k=0;
+		while(i < left && j < right){
+			if(l[i]<=r[j]){
+				a[k++]=l[i++];
+			}
+			else{
+				a[k++]=r[j++];
+			}
+		}
+		
+		while(i < left){
+			a[k++] = l[i++];
+		}
+		while(j < right){
+			a[k++] = r[j++];
+		}
+		
+	}
+	
+	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int arr[] = {8,9,6,5,1,2,3};
+		for(int i=0;i< arr.length;i++){
+			System.out.print(arr[i]);
+		}
+		mergeSort(arr, arr.length);
+		System.out.println();
+		System.out.println("Sorted Array!");
+		for(int i=0;i< arr.length;i++){
+			System.out.print(arr[i]);
+		}
+	}
+}
+</code>
+
+</pre>
+  </div>
+</div>
+</body>
+</html>
