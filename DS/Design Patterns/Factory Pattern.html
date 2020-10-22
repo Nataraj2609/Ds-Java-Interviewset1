@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title - Factory Design Pattern - solution by Thilak</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/monokai-sublime.min.css" integrity="sha512-8irWeigPA1Pm20tgaynUtqbAQ/zvOizMj7Olu0sF9kQTGabFfvlAHUqhslzHwr7OZO6Z0IN6VoXAALzipXIwgA==" crossorigin="anonymous" />
+			<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css">
+			body{
+				padding: 20px;
+			}
+		</style>
+</head>
+<body>
+<div class="container">
+<div class="card border-dark mb-3">
+  <div class="card-body text-dark">
+    <h5 class="card-title">Factory Design Pattern - solution by Thilak</h5>
+    <p class="card-text">
+<pre><code class="java">
+
+package alti;
+
+import java.util.Scanner;
+
+
+abstract class Cuisine {
+    public abstract Cuisine serveFood(String dish);
+}
+
+class UnservableCuisineRequestException extends Exception {
+    public UnservableCuisineRequestException(String message) {
+        super(message);
+    }
+}
+
+class FoodFactory {
+    Cuisine chinese;
+    Cuisine italian;
+    Cuisine japanese;
+    Cuisine mexican;
+    static FoodFactory foodFactory = new FoodFactory();
+
+    static FoodFactory getFactory() {
+        return foodFactory;
+    }
+
+    public void registerCuisine(String cuisineName, Cuisine cuisine) {
+        if (cuisine instanceof Chinese)
+            chinese = cuisine;
+        else if (cuisine instanceof Italian)
+            italian = cuisine;
+        else if (cuisine instanceof Japanese)
+            japanese = cuisine;
+        else if (cuisine instanceof Mexican)
+            mexican = cuisine;
+    }
+
+    public Cuisine serveCuisine(String cuisineKey, String dish) throws UnservableCuisineRequestException {
+        if (cuisineKey.equals("Chinese"))
+            return chinese.serveFood(dish);
+        else if (cuisineKey.equals("Italian"))
+            return italian.serveFood(dish);
+        else if (cuisineKey.equals("Japanese"))
+            return japanese.serveFood(dish);
+        else if (cuisineKey.equals("Mexican"))
+            return mexican.serveFood(dish);
+        else throw new UnservableCuisineRequestException("Unservable cuisine " + cuisineKey + " for dish " + dish);
+    }
+}
+
+class Chinese extends Cuisine {
+    String dish;
+
+    @Override
+    public Cuisine serveFood(String dish) {
+        this.dish = dish;
+        return this;
+    }
+
+    public String getDish() {
+        return dish;
+    }
+}
+
+class Italian extends Cuisine {
+
+    String dish;
+
+    @Override
+    public Cuisine serveFood(String dish) {
+        this.dish = dish;
+        return this;
+    }
+
+    public String getDish() {
+        return dish;
+    }
+}
+
+class Japanese extends Cuisine {
+
+    String dish;
+
+    @Override
+    public Cuisine serveFood(String dish) {
+        this.dish = dish;
+        return this;
+    }
+
+    public String getDish() {
+        return dish;
+    }
+}
+
+class Mexican extends Cuisine {
+
+    String dish;
+
+    @Override
+    public Cuisine serveFood(String dish) {
+        this.dish = dish;
+        return this;
+    }
+
+    public String getDish() {
+        return dish;
+    }
+}
+
+public class Solution {
+    private static final Scanner INPUT_READER = new Scanner(System.in);
+    private static final FoodFactory FOOD_FACTORY = FoodFactory.getFactory();
+
+    static {
+        FoodFactory.getFactory().registerCuisine("Chinese", new Chinese());
+        FoodFactory.getFactory().registerCuisine("Italian", new Italian());
+        FoodFactory.getFactory().registerCuisine("Japanese", new Japanese());
+        FoodFactory.getFactory().registerCuisine("Mexican", new Mexican());
+    }
+
+    public static void main(String[] args) {
+        int numOfOrders = Integer.parseInt(INPUT_READER.nextLine());
+        while (numOfOrders-- > 0) {
+            String[] food = INPUT_READER.nextLine().split(" ");
+            String cuisine = food[0];
+            String dish = food[1];
+            try {
+                if (FOOD_FACTORY.equals(FoodFactory.getFactory())) {
+                    Cuisine servedFood = FOOD_FACTORY.serveCuisine(cuisine, dish);
+                    switch (cuisine) {
+                        case "Chinese":
+                            Chinese chineseDish = (Chinese) servedFood;
+                            System.out.println("Serving " + chineseDish.getDish() + " (Chinese)");
+                            break;
+                        case "Italian":
+                            Italian italianDish = (Italian) servedFood;
+                            System.out.println("Serving " + italianDish.getDish() + " (Italian)");
+                            break;
+                        case "Japanese":
+                            Japanese japaneseDish = (Japanese) servedFood;
+                            System.out.println("Serving " + japaneseDish.getDish() + " (Japanese)");
+                            break;
+                        case "Mexican":
+                            Mexican mexicanDish = (Mexican) servedFood;
+                            System.out.println("Serving " + mexicanDish.getDish() + " (Mexican)");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            } catch (UnservableCuisineRequestException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+}
+
+
+
+</pre>
+    </p>
+  </div>
+</div>
+</body>
+</html>
