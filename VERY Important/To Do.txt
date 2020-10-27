@@ -36,30 +36,3 @@ https://www.geeksforgeeks.org/amazon-interview-set-82-for-sde-2/
 https://www.glassdoor.co.in/Interview/Amazon-Software-Development-Engineer-II-Interview-Questions-EI_IE6036.0,6_KO7,39.htm?countryRedirect=true
 
 
-
-Meiyro UI 10
-11 - heading 
-
-~~~  summary - word format business 
-
-~~~  business flow diag - even neat arrows
-
-~~~  data flow doc - highlight in yellow
-
-~~~  unwanted grid cells - cut
-
-~~~  Dpr analysis - sheet name
-
-~~~  font - inquiry - change it pas type out of 6
-
-master dpr - form cam/folder/dpr/asset
-
-updated master doc get from git
-
-data registration docc is necessary?
-
-
-Yours Positively!
-
-#chennai #chennaiblogger #motivation #coding #instagram #bigboss or your life, You decide  #ipl2020  or your future  #thecodinghub #learnwebdevelopment #learntocode #annauniversity #hindusthan #svce #infosys #tcs #cts #accenture #lifestyle 
- #programming #programmer #developer  #javascript  #codinglife #computerscience #java  #webdeveloper  #webdevelopment  #webdesign #softwaredeveloper #programmers
