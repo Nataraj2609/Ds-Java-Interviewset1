@@ -1,0 +1,98 @@
+{
+    "page": "2",
+    "per_page": 10,
+    "total": 1951,
+    "total_pages": 196,
+    "data": [
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupA",
+            "team1": "Villarreal",
+            "team2": "Bayern Munich",
+            "team1goals": "0",
+            "team2goals": "2"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupB",
+            "team1": "Lille OSC",
+            "team2": "CSKA Moskva",
+            "team1goals": "2",
+            "team2goals": "2"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupD",
+            "team1": "Dinamo Zagreb",
+            "team2": "Real Madrid",
+            "team1goals": "0",
+            "team2goals": "1"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupB",
+            "team1": "Internazionale",
+            "team2": "Trabzonspor",
+            "team1goals": "0",
+            "team2goals": "1"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupA",
+            "team1": "Manchester City",
+            "team2": "SSC Napoli",
+            "team1goals": "1",
+            "team2goals": "1"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupC",
+            "team1": "SL Benfica",
+            "team2": "Manchester United",
+            "team1goals": "1",
+            "team2goals": "1"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupD",
+            "team1": "Real Madrid",
+            "team2": "AFC Ajax",
+            "team1goals": "3",
+            "team2goals": "0"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupC",
+            "team1": "Manchester United",
+            "team2": "Basel",
+            "team1goals": "3",
+            "team2goals": "3"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupA",
+            "team1": "Bayern Munich",
+            "team2": "Manchester City",
+            "team1goals": "2",
+            "team2goals": "0"
+        },
+        {
+            "competition": "UEFA Champions League",
+            "year": 2011,
+            "round": "GroupB",
+            "team1": "CSKA Moskva",
+            "team2": "Internazionale",
+            "team1goals": "2",
+            "team2goals": "3"
+        }
+    ]
+}

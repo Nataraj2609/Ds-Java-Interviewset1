@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title - Finding Second Max in an array</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/monokai-sublime.min.css" integrity="sha512-8irWeigPA1Pm20tgaynUtqbAQ/zvOizMj7Olu0sF9kQTGabFfvlAHUqhslzHwr7OZO6Z0IN6VoXAALzipXIwgA==" crossorigin="anonymous" />
+			<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css">
+			body{
+				padding: 20px;
+			}
+		</style>
+</head>
+<body>
+<div class="container">
+<div class="card border-dark mb-3">
+  <div class="card-body text-dark">
+    <h5 class="card-title">Title - Finding Second Max in an array</h5>
+    <p class="card-text">
+<pre><code class="java">
+
+package HackerRank;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.Iterator;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class RestApi2 {
+
+	private static int goals = 0;
+
+	private static int VisitingTeam = 0; // 0-False 1-True
+
+	private static String makeAHttpCall(int year, String com, String team) throws IOException {
+		String user_agent = "Mozilla/5.0";
+		StringBuilder sb = new StringBuilder("https://jsonmock.hackerrank.com/api/football_matches?year=");
+
+		sb.append(year);
+		sb.append("&competition=");
+		sb.append(com);
+		if (VisitingTeam != 1)
+			sb.append("&team1=");
+		else
+			sb.append("&team2=");
+		sb.append(team);
+
+		String get_url = sb.toString();
+		get_url = get_url.replaceAll("\\s", "%20");
+		System.out.println(get_url);
+
+		URL obj = new URL(get_url);
+		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
+		con.setRequestMethod("GET");
+		con.setRequestProperty("User-Agent", user_agent);
+
+		int responsecode = con.getResponseCode();
+
+		if (responsecode == HttpsURLConnection.HTTP_OK) {
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			String inputLine;
+			StringBuffer response = new StringBuffer();
+
+			while ((inputLine = in.readLine()) != null) {
+				response.append(inputLine);
+			}
+			String callTheFunc = response.toString();
+			System.out.println(callTheFunc);
+			return callTheFunc;
+		} else {
+			return "Failed";
+		}
+	}
+
+	public static void main(String[] args) throws IOException, ParseException {
+		int year = 2011;
+		String com = "UEFA Champions League";
+		String team = "Chelsea";
+
+		String response = makeAHttpCall(year, com, team);
+		performCalc(response);
+
+		VisitingTeam = 1;
+		response = makeAHttpCall(year, com, team);
+		performCalc(response);
+
+		System.out.println("Number of goals` ->  " + goals);
+	}
+
+	private static void performCalc(String response) throws ParseException {
+		System.out.println(response);
+		Object obj = new JSONParser().parse(response);
+		JSONObject jo = (JSONObject) obj;
+		JSONArray ja = (JSONArray) jo.get("data");
+		String l;
+
+		Iterator i = ja.iterator();
+		while (i.hasNext()) {
+			JSONObject match = (JSONObject) i.next();
+			if (VisitingTeam != 1)
+				l = (String) match.get("team1goals");
+			else
+				l = (String) match.get("team2goals");
+			goals += Integer.parseInt(l);
+			System.out.println("Goals ->  " + goals);
+		}
+	}
+}
+
+
+
+
+
+</pre>
+    </p>
+  </div>
+</div>
+</body>
+</html>

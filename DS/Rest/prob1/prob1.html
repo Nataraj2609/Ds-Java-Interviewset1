@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title - Finding Second Max in an array</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/monokai-sublime.min.css" integrity="sha512-8irWeigPA1Pm20tgaynUtqbAQ/zvOizMj7Olu0sF9kQTGabFfvlAHUqhslzHwr7OZO6Z0IN6VoXAALzipXIwgA==" crossorigin="anonymous" />
+			<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css">
+			body{
+				padding: 20px;
+			}
+		</style>
+</head>
+<body>
+<div class="container">
+<div class="card border-dark mb-3">
+  <div class="card-body text-dark">
+    <h5 class="card-title">Title - Finding Second Max in an array</h5>
+    <p class="card-text">
+<pre><code class="java">
+
+//Solution 1 - True Solution
+
+package HackerRank;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Iterator;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class RestApiAns {
+
+	private static int draw = 0;
+
+	public static int getPages(int year) throws IOException, ParseException {
+		String response = makeAHttpCall(year, 1);
+		Object obj = new JSONParser().parse(response);
+		JSONObject jo = (JSONObject) obj;
+		Long data = (Long) jo.get("total_pages");
+		int pages = data.intValue();
+		return pages;
+	}
+
+	private static String makeAHttpCall(int year, int i) throws IOException {
+		String user_agent = "Mozilla/5.0";
+		StringBuilder sb = new StringBuilder("https://jsonmock.hackerrank.com/api/football_matches?year=");
+
+		sb.append(year);
+		sb.append("&team1goals=");
+		sb.append(i);
+		sb.append("&team2goals=");
+		sb.append(i);
+		String get_url = sb.toString();
+		System.out.println(get_url);
+
+		URL obj = new URL(get_url);
+		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
+		con.setRequestMethod("GET");
+		con.setRequestProperty("User-Agent", user_agent);
+
+		int responsecode = con.getResponseCode();
+
+		if (responsecode == HttpURLConnection.HTTP_OK) {
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			String inputLine;
+			StringBuffer response = new StringBuffer();
+
+			while ((inputLine = in.readLine()) != null) {
+				response.append(inputLine);
+			}
+			String callTheFunc = response.toString();
+			System.out.println(callTheFunc);
+			return callTheFunc;
+		} else {
+			return "Failed";
+		}
+	}
+
+	public static void main(String[] args) throws IOException, ParseException {
+
+		int year = 2011;
+
+		for (int i = 0; i <= 10; i++) {
+			String response = makeAHttpCall(year, i);
+			performCalc(response);
+		}
+
+		System.out.println("Number of Draws ->  " + draw);
+	}
+
+	private static void performCalc(String response) throws ParseException {
+		Object obj = new JSONParser().parse(response);
+		JSONObject jo = (JSONObject) obj;
+		Long data = (Long) jo.get("total");
+		draw += data.intValue();
+	}
+}
+
+
+// Another Sol - Brute Force
+
+package HackerRank;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Iterator;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class RestApiHR {
+
+	private static int draw = 0;
+
+	public static int getPages(int year) throws IOException, ParseException {
+		String response = makeAHttpCall(year, 1);
+		Object obj = new JSONParser().parse(response);
+		JSONObject jo = (JSONObject) obj;
+		Long data = (Long) jo.get("total_pages");
+		int pages = data.intValue();
+		return pages;
+	}
+
+	private static String makeAHttpCall(int year, int i) throws IOException {
+		String user_agent = "Mozilla/5.0";
+		StringBuilder sb = new StringBuilder("https://jsonmock.hackerrank.com/api/football_matches?year=");
+
+		sb.append(year);
+		sb.append("&page=");
+		sb.append(i);
+		String get_url = sb.toString();
+		System.out.println(get_url);
+
+		URL obj = new URL(get_url);
+		HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
+		con.setRequestMethod("GET");
+		con.setRequestProperty("User-Agent", user_agent);
+
+		int responsecode = con.getResponseCode();
+
+		if (responsecode == HttpURLConnection.HTTP_OK) {
+
+			BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+			String inputLine;
+			StringBuffer response = new StringBuffer();
+
+			while ((inputLine = in.readLine()) != null) {
+				response.append(inputLine);
+			}
+			String callTheFunc = response.toString();
+			System.out.println(callTheFunc);
+			return callTheFunc;
+		} else {
+			return "Failed";
+		}
+	}
+
+	public static void main(String[] args) throws IOException, ParseException {
+
+		int year = 2011;
+		int total_pages = getPages(year);
+		int pages = 0;
+
+		if (total_pages % 10 != 0) {
+			pages = total_pages / 10 + 1;
+		}
+
+		System.out.println("Pages to be called -> " + pages);
+		for (int i = 1; i <= pages; i++) {
+			String response = makeAHttpCall(year, i);
+			performCalc(response);
+		}
+
+		System.out.println("Number of Draws ->  " + draw);
+	}
+
+	private static void performCalc(String response) throws ParseException {
+		Object obj = new JSONParser().parse(response);
+		JSONObject jo = (JSONObject) obj;
+		JSONArray data = (JSONArray) jo.get("data");
+		JSONObject singleObj = (JSONObject) data.get(0);
+
+		Iterator i = data.iterator();
+
+		while (i.hasNext()) {
+			JSONObject match = (JSONObject) i.next();
+
+			if (match.get("team1goals").equals(match.get("team2goals"))) {
+				System.out.println("draw ->  "+draw);
+				draw++;
+			}
+		}
+	}
+}
+
+
+
+</pre>
+Credits: <a href="https://www.geeksforgeeks.org/find-second-largest-element-array/">geeksforgeeks</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>
