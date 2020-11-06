@@ -14,7 +14,6 @@ https://www.vogella.com/tutorials/JUnit/article.html
 
 
 MySql
-https://www.tutorialspoint.com/dbms/dbms_data_independence.htm
 https://beginnersbook.com/2018/11/introduction-to-sql/
 
 
