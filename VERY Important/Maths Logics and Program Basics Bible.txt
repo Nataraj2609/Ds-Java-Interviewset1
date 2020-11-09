@@ -147,3 +147,13 @@ Relational Algebra
 
 		Foreign Key – Foreign keys are the columns of a table that points to the primary key of another table. They act as a cross-reference between tables.
 
+
+Q -> Array has each elem repeated twice, but only one occurs once. [2,2,1,3,3,1,4]  => return 4
+
+If we take XOR of zero and some bit, it will return that bit
+a XOR (^) 0 = aa⊕0=a
+If we take XOR of two same bits, it will return 0
+a XOR (^) a = 0a⊕a=0
+
+a XOR (^) b XOR (^) a = (a XOR (^) a) XOR (^) b = 0 XOR (^) b = ba⊕b⊕a=(a⊕a)⊕b=0⊕b=b
+
