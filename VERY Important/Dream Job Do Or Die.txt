@@ -157,3 +157,41 @@ https://www.javacodegeeks.com/2015/06/java-programming-tips-best-practices-begin
 https://howtodoinjava.com/ibatis-2/
 https://howtodoinjava.com/hibernate-tutorials/
 https://howtodoinjava.com/java/jdbc/jdbc-mysql-database-connection-example/
+
+
+
+
+Need to Study:
+
+
+https://www.hackerrank.com/challenges/pattern-syntax-checker/problem
+
+
+
+Junit Testing
+https://www.vogella.com/tutorials/JUnit/article.html
+
+
+
+MySql
+https://beginnersbook.com/2018/11/introduction-to-sql/
+
+
+Design pattern Ecom Architecture
+https://github.com/MoonSulong/Ecommerce#4-database-implementation
+https://creately.com/diagram/example/iosv0d302/E-commerce%20database%20schema
+
+
+Hard
+
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+
+https://medium.com/@rachit138/how-i-cleared-the-amazon-sde-2-interview-f82a33706ff4
+https://www.amazon.jobs/en/landing_pages/software-development-topics
+https://www.quora.com/What-can-I-expect-in-Amazons-SDE-online-assessment-Can-someone-who-has-taken-the-assessment-please-give-me-examples-of-the-types-of-questions-asked
+https://www.geeksforgeeks.org/amazon-interview-experience-sde-2/
+https://www.geeksforgeeks.org/amazon-interview-set-82-for-sde-2/
+https://www.glassdoor.co.in/Interview/Amazon-Software-Development-Engineer-II-Interview-Questions-EI_IE6036.0,6_KO7,39.htm?countryRedirect=true
+
+

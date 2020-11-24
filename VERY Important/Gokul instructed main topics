@@ -14,7 +14,7 @@ final,finally, finalize()
 immutable class in java
 ----------
 Interface :
-Marker Interface , Functional interface & how to create custom functional interface
+Marker interface , Functional interface & how to create custom functional interface
 -----------
 Diamond operator ,
 Vararg ,
@@ -31,6 +31,9 @@ Shallow Copy Vs Deep Copy,
 Singleton Class in java,
 transient Keyword in java
 ----------
+
+
+
 Inner class : 
 Inner class , Method local inner class,Anonymous inner class,static inner class
 ---------
@@ -130,3 +133,9 @@ ribbon load balancing
 hystrix circuit breaker pattern
 ----------------
 Design pattern and Disadvantage
+
+
+
+https://www.vogella.com/tutorials/JavaConcurrency/article.html#:~:text=Atomic%20operation,of%20type%20long%20or%20double%20).
+
+https://www.javamadesoeasy.com/2015/09/how-garbage-collection-works-internally.html
