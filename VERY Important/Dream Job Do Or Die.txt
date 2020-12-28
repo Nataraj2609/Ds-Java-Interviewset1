@@ -175,6 +175,7 @@ https://www.vogella.com/tutorials/JUnit/article.html
 
 MySql
 https://beginnersbook.com/2018/11/introduction-to-sql/
+https://www.techonthenet.com/sql/joins.php
 
 
 Design pattern Ecom Architecture

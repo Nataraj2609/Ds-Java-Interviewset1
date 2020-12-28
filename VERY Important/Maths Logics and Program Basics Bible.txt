@@ -151,9 +151,22 @@ Relational Algebra
 Q -> Array has each elem repeated twice, but only one occurs once. [2,2,1,3,3,1,4]  => return 4
 
 If we take XOR of zero and some bit, it will return that bit
-a XOR (^) 0 = aa⊕0=a
+a XOR (^) 0 = a   a⊕0=a
 If we take XOR of two same bits, it will return 0
-a XOR (^) a = 0a⊕a=0
+a XOR (^) a = 0   a⊕a=0
 
-a XOR (^) b XOR (^) a = (a XOR (^) a) XOR (^) b = 0 XOR (^) b = ba⊕b⊕a=(a⊕a)⊕b=0⊕b=b
+a XOR (^) b XOR (^) a = (a XOR (^) a) XOR (^) b = 0 XOR (^) b = ba⊕b⊕a =(a⊕a)⊕b  =0⊕b  =b
 
+
+Java Program to find missing numbers
+
+1) Sum of the series: Formula: n (n+1)/2( but only work for one missing number)
+2) Use BitSet, if an array has more than one missing elements.
+Read more: https://javarevisited.blogspot.com/2014/11/how-to-find-missing-number-on-integer-array-java.html#ixzz6hoebXeD0
+
+BitSet is a class defined in the java.util package. It creates an array of bits represented by boolean values.
+
+
+        BitSet bitSet = new BitSet(5);
+                bitSet.set(4);
+        System.out.println(bitSet.nextClearBit(4));  // 4  is the starting index to search for bit set false

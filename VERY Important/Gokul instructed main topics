@@ -31,9 +31,13 @@ Shallow Copy Vs Deep Copy,
 Singleton Class in java,
 transient Keyword in java
 ----------
-
-
-
+Exception Handling :
+Exception Hierarchy 
+Checked Exception
+Unchecked Exception
+Error
+try,catch,finally, throw,throws
+Custom Exception
 Inner class : 
 Inner class , Method local inner class,Anonymous inner class,static inner class
 ---------
@@ -43,16 +47,6 @@ Garbage collection
 system.gc ()
 How to manage outofmemory error
 stackoverflow Vs OutOfMemory
-----------
-Exception Handling :
-Exception Hierarchy 
-Checked Exception
-Unchecked Exception
-Error
-try,catch,finally, throw,throws
-Custom Exception
-
-
 -----------
 Spring Boot :
 DI ,Constructor Based DI ,Setter Based DI
@@ -87,8 +81,6 @@ why we go for new Date time API
 String Join(),
 Aggregate Operations in stream,predicate
 ---------------
-
-
 REST API :
 GET(),POST(),DELETE(),OPTION()
 PUT Vs PATCH
@@ -111,8 +103,6 @@ Open session(),get session ()
 @Query
 SQL Vs HQL
 -------------------
-
-
 Threading :
 thread Vs Process
 what r all the ways to create threads
@@ -136,6 +126,17 @@ Design pattern and Disadvantage
 
 
 
+
+
+
 https://www.vogella.com/tutorials/JavaConcurrency/article.html#:~:text=Atomic%20operation,of%20type%20long%20or%20double%20).
 
 https://www.javamadesoeasy.com/2015/09/how-garbage-collection-works-internally.html
+
+
+map vs flatmap
+list<list <string> >=> flatmap => list<string>
+
+
+
+
