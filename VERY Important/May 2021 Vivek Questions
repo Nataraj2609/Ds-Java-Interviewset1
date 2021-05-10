@@ -1,0 +1,235 @@
+Explain about the memory leakage in Substring.
+What are all the new features in Java 8
+What is functional interface
+What is lamda func
+Hashmap working in java 8 vs old version
+Memory management improvements in JAVA 8
+What is consumer an supplier
+Stream vs Parallelstream
+Normal loop vs stream
+Interface in java 8 vs in old versions
+Iterator vs spliterator
+Advantage of using optional.
+Map vs flatmap
+Explain predicate
+Nashorn in Java8
+
+What is @controller,@restcontroller,@configration,@service,@repository,@autowired,@bean,@Qualifier
+
+
+
+In Java , what is string?
+Why string is immutable?
+Explain final keyword?
+Explain static keyword?
+How hashmap works?
+How array list works?
+
+
+
+Comparable vs Comparator
+Iterator vs Enumerator
+Where (in which situation) to use Set, HashMap, List
+Java 8 streams, terminal methods, intermediate methods
+how to convert a list to set, map to list, etc
+Internal working of Collections (Eg. HashMap, size, load factor)
+Optional interface, methods in it. (ispresent, ifpresent, ofnullable, orElse, orElsethrow, etc.) along with their return types
+Flat map concept. in which scenario to use flatmaps
+map() vs flatmap()
+Fail fast iterator, fail safe iterator, concurrent modification exception
+default method in java 8, functional interface in java 8, lambda exp, etc
+Searching and sorting algorithms with time complexity
+How to analyze time complexity for a program
+Microservice questions, architecture, advantages, etc
+Spring boot concepts
+Core java questions
+Data structures (Stack,queue, linkedlist)
+Problems may be given and asked to be solved during face to face.
+Sample programs:
+LeetCode Problems: https://leetcode.com/problemset/all/
+
+
+
+String 
+ https://leetcode.com/problems/decode-ways/
+ https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+Searching
+ https://www.geeksforgeeks.org/find-first-repeating-element-array-integers/
+ https://www.geeksforgeeks.org/fibonacci-search/
+Sorting
+ https://www.geeksforgeeks.org/find-whether-an-array-is-subset-of-another-array-set-1/
+ https://www.geeksforgeeks.org/find-missing-elements-of-a-range/
+https://www.geeksforgeeks.org/check-reversing-sub-array-make-array-sorted/
+
+
+
+
+
+Topics to prepare
+
+Java 8:
+-         Streams
+-         Lamda expressions
+-         Optional interface
+-         Flatmap, map
+-         Terminal methods, intermediate methods
+-         Default method
+-         Functional interface
+Collections:
+-         Internal working of Collections (Eg.: HashMap), size, load factor
+-         Which collection to use for a given scenario
+-         Iterator (Fail fast, fail safe)
+-         Comparator vs Comparable
+Data Structures and Algorithms:
+-         Sorting algorithms with time complexity
+-         Searching algorithms with time complexity
+-         Given a problem, you should be able to derive an optimal solution and analyze its time complexity
+-         Data structures (LinkedList, Stack, Queue, Set, etc.) and its sample implementation (Eg. Inserting a node to a linkedlist)
+Microservice:
+-         Spring Boot topics
+-         MVC Architecture
+REST API
+Hibernate
+
+
+
+Like core java, and u have to come up with an optimal solution
+
+◦	Stack using Linked list 
+	◦	Convert the same into circular linked list
+	◦	Internal implementation of hashmap
+	◦	Hashset implementation
+	◦	Qualifier
+	◦	Concurrent modification exception
+	◦	Iterator
+	◦	What happens when hashmap is full
+	◦	Executor service
+	◦	Java program and different approach for the same program and time complexity 
+	◦	Junit - @beforeclass and @test
+
+
+Binary Search Tree kaetanga, rotation .. Linked list,stack using linked list
+
+Linkedlist and stack using array kaetanga
+
+
+Deloitte
+Walmart
+Mr.Cooper
+Paypal
+Ideas2It
+
+Amazon Referral in Whatsapp Group
+Chargebee
+Orangescape
+Navis Chennai
+EY
+Temenos
+
+
+Tcs
+
+Future Aim : American Express Global Business Travel
+
+________________________________________________________________________________________________________________________________
+Docker
+Kubernetes
+
+
+AWS
+Heroku
+
+
+nginx
+Strong in software design, architecture, design patterns,
+OWASP
+
+https://docker-curriculum.com/
+
+
+
+________________________________________________________________________________________________________________________________
+Back End
+
+https://www.bigshyft.com/practice/browseTest
+
+Optionals, Java Basics, Compilation, Design Patterns, Inheritance, HTML, String, LocalDate, Nested class, Web Service Architecture, Primitive and wrapper types, Iterators, Annotations, Handling Exceptions, Collections, Fundamentals of java, Generics, Java, Using Operators and Decision Constructs, Operators, Creational Design Pattern, String Handling, Synchronization, Date Time API, Working with Methods and Encapsulation, Java automation, Threads, Lambda and Streams, Working with Selected classes from the Java API, Working With Java Data Types, Enumerations
+
+Should have experience in Other Libraries: JWT, OAuth2, SAML-SSO, REST APIs
+GraphQL
+
+Front End
+
+Local storage, JS Basics, HTML Basics, Promises, Attributes, Session Storage, CSS Basics, Web Worker, Closures, Prototype and inheritance, Classes
+
+
+
+Give some examples of performance optimization for data retrieval.
+How do you scale application
+
+What are inverted indexes ?
+Explain TF-IDF.
+ACID properties
+Concurrency
+Optimistic vs pessimistic locking
+This was on the basis of my profile .
+Different questions were asked for different applicants from completely.  
+
+
+
+
+
+
+
+Concentrate On: 
+
+SQL
+
+SEE Joins Union
+Any All
+COALESCE - default value if it is Null
+Stored Procedures - CREATE PROCEDURE / Exec SelectAllCustomers @City = 'London';
+MySQL String Functions
+
+
+Java Programs
+Fibonacci - using memotization
+Prime number - gfg
+
+https://www.javatpoint.com/java-programs
+
+
+
+
+
+pip install nsetools
+
+python
+
+nse.get_index_quote("nifty bank")
+
+
+top_gainers = nse.get_top_gainers()
+print(top_gainers)
+
+
+q = nse.get_quote('infy')
+from pprint import pprint
+pprint(q)
+
+https://nsetools.readthedocs.io/en/latest/usage.html#getting-lot-sizes
+
+-------------------------------------------------------------------------------------------------------------
+
+https://stackoverflow.com/questions/64432096/how-to-call-python-file-in-angular
+
+https://www.edureka.co/community/358/how-to-execute-a-python-file-with-few-arguments-in-java
+
+https://www.baeldung.com/java-working-with-python
+
+https://bytes.com/topic/python/insights/949995-three-ways-run-python-programs-java
+
+https://stackoverflow.com/questions/10097491/call-and-receive-output-from-python-script-in-java
+
+https://alvinalexander.com/java/java-exec-processbuilder-process-1/
